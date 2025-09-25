@@ -9,3 +9,8 @@ HTML / CSS / JavaScript を使用して以下の機能を実装しました：
 ---
 ## How to Run
 ローカルで `index.html` をブラウザで開くだけで実行できます。
+
+## プロジェクト構成
+- **test5.html** : メインページ（ポートフォリオページ）
+- **style5.css** : ページのスタイル定義
+- **app.js** : ページに動きを与えるJavaScript
