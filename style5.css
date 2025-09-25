@@ -1,0 +1,80 @@
+/* ベース */
+:root{
+  --bg:#f4f4f5; --card:#ffffff; --text:#1f2937;
+  --muted:#6b7280; --accent:#2563eb; --border:#e5e7eb;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg); color:var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height:1.8;
+}
+
+/* レイアウト */
+.container{ width:min(960px, 92%); margin-inline:auto; }
+.site-header{
+  background:linear-gradient(180deg, #fff, #fafafa);
+  border-bottom:1px solid var(--border); padding:28px 0 16px;
+}
+.site-header h1{ margin:0 0 4px; letter-spacing:.02em; }
+.tagline{ margin:0 0 12px; color:var(--muted); }
+.nav{ display:flex; gap:16px; flex-wrap:wrap; }
+.nav a{
+  text-decoration:none; color:var(--accent);
+  padding:6px 10px; border:1px solid transparent; border-radius:8px;
+}
+.nav a:hover{ background:#eef2ff; border-color:#c7d2fe; }
+
+/* 記事カード */
+.post{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:24px; margin:24px 0 40px;
+  box-shadow:0 8px 24px rgba(0,0,0,.04);
+}
+
+/* 見出しに自動番号 */
+body{counter-reset: sec;}
+.post h2{ counter-increment: sec; margin:28px 0 8px; font-size:1.5rem; }
+.post h2::before{ content: counter(sec) ". "; color:var(--accent); font-weight:700; }
+
+/* 装飾 */
+a{ color:var(--accent); }
+.callout{
+  background:#f8fafc; border:1px solid var(--border); border-left:4px solid var(--accent);
+  padding:12px 14px; border-radius:10px; margin-top:20px; color:#111827;
+}
+.site-footer{ border-top:1px solid var(--border); padding:20px 0 40px; color:var(--muted); text-align:center; }
+img{ max-width:100%; height:auto; display:block; }
+html{ scroll-behavior:smooth; }
+
+/* 折りたたみ用の矢印 */
+.js-toggle{
+  position:relative; cursor:pointer; user-select:none;
+  padding-right:28px; display:flex; align-items:center; gap:.5rem;
+  scroll-margin-top:80px; /* アンカーで飛んだ時に上で止める */
+}
+.js-toggle::after{
+  content:"▼"; position:absolute; right:0; top:.1em;
+  transition: transform .2s ease; color:var(--muted);
+}
+.js-toggle[aria-expanded="false"]::after{ transform: rotate(-90deg); }
+
+.acc-panel{ padding-top:.25rem; }
+.is-hidden{ display:none; }
+
+/* トップへ戻る */
+.back-to-top{
+  position:fixed; right:20px; bottom:20px; width:44px; height:44px;
+  border-radius:10px; background-color:var(--accent); color:#fff;
+  display:grid; place-items:center; text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  opacity:0; pointer-events:none;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease;
+  font-weight:700;
+}
+.back-to-top.is-visible{
+  opacity:1; pointer-events:auto; transform: translateY(0);
+}
+.back-to-top:hover{ filter:brightness(0.92); }

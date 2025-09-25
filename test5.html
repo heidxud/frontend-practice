@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>自己紹介ページ</title>
+        <link rel="stylesheet" href="style5.css">
+    </head>
+
+    <body id="top">
+        <header class="site-header">
+            <div class="container">
+                <h1>自己紹介ブログ</h1>
+                <p class="tagline">フロントエンド学習の記録と日々のメモ</p>
+                <nav class="nav">
+                    <a href="#name">名前</a>
+                    <a href="#age">年齢</a>
+                    <a href="#hobby">趣味</a>
+                    
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <article class="post">
+                <h2 class="js-toggle" id="name" role="button" tabindex="0" aria-expanded="false">名前</h2>
+                <div class="acc-panel is-hidden">
+                <p>中川涼馨（なかがわ りょうが）です</p>
+                </div>
+
+                <h2 class="js-toggle" id="age" role="button" tabindex="0" aria-expanded="false">年齢</h2>
+                <div class="acc-panel is-hidden">
+                <p>25歳</p>
+                <p>2000年生まれのミレニアムベビーです!</p>
+                </div>
+
+                <h2 class="js-toggle" id="hobby" role="button" tabindex="0" aria-expanded="false">趣味</h2>
+                <div class="acc-panel is-hidden">
+                <p>ゲーム/お酒</p>
+                <p>スマホゲームは、ポケモンGOやアークナイツ、シャドウバース<br>
+                    PCはELDEN RING NightReignやValorant、Path of Exile2など様々な分野のゲームをしています。</p>
+                <p>好きなお酒は日本酒です。にごり酒から超辛口まで飲みますが甘めの日本酒のが好きです。<br>
+                    苦手なお酒はハイボールです。ウィスキーの香りが苦手で一滴も飲めません…</p>
+                </div>
+
+                <div class="callout">
+                    <strong>メモ：</strong>この記事は学習用に随時アップデートします。
+                </div>
+            </article>
+
+            <article class="post">
+                <h2>最近はまっているゲーム</h2>
+                <p>結構いろんなゲームは触っていて、スマホゲームだとアークナイツやポケモンGO、最近リリースされたシャドウバースもやっています。<br>
+                PCゲームだと、ELDEN RINGやValorant、Path of Exile2など様々な分野のゲームをしています。
+                </p>
+
+                <h2>最近のニュース</h2>
+                <p>グラボが壊れました( ;∀;)<br>
+                というのも、普段通り、寝る前にパソコンをシャットダウンしてたのですが、次の日起きてパソコンを起動すると画面がつかない！！分解して掃除をしたりしてみましたが画面は暗転したまま...<br>
+                次のグラボをどうするか悩みながら、とりあえずGT710を使用してネットサーフィンを楽しみます</p>
+            </article>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <small>© 2025 Heid</small>
+            </div>
+        </footer>
+
+        <!--トップへ戻るボタン-->
+        <a href="#top" class="back-to-top" id="back-to-top" aria-label="トップへ戻る">↑</a>
+
+        <!--JavaScriptを読み込む-->
+        <script src="app.js" defer></script>
+
+    </body>
+</html>
